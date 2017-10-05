@@ -842,7 +842,7 @@ static void cpufreq_smartass_power_resume(struct power_suspend *h)
     smartass_suspend(i,0);
 }
 
-static struct power_suspend smartass_power_suspend = {
+struct power_suspend smartass_power_suspend = {
     .suspend = cpufreq_smartass_power_suspend,
     .resume = cpufreq_smartass_power_resume,
 };
