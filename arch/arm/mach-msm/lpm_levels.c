@@ -18,6 +18,7 @@
 #include <linux/platform_device.h>
 #include <linux/mutex.h>
 #include <linux/cpu.h>
+#include <linux/quickwakeup.h>
 #include <linux/qpnp/pin.h>
 #include <linux/of.h>
 #include <linux/irqchip/msm-mpm-irq.h>
@@ -887,6 +888,7 @@ static const struct platform_suspend_ops lpm_suspend_ops = {
 	.valid = suspend_valid_only_mem,
 	.prepare_late = lpm_suspend_prepare,
 	.wake = lpm_suspend_wake,
+	.suspend_again = quickwakeup_suspend_again,
 };
 
 static void setup_broadcast_timer(void *arg)
