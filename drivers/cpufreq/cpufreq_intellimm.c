@@ -619,7 +619,7 @@ skip_this_cpu:
 		intellimm_powersave_bias_init();
 	} else {
 		for_each_online_cpu(cpu) {
-			//if (lock_policy_rwsem_write(cpu) < 0)
+			if (lock_policy_rwsem_write(cpu) < 0)
 				continue;
 
 			dbs_info = &per_cpu(imm_cpu_dbs_info, cpu);

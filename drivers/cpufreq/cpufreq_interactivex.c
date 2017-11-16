@@ -37,7 +37,7 @@
 #include <asm/cputime.h>
 
 static atomic_t active_count = ATOMIC_INIT(0);
-/*static unsigned long stored_timer_rate;*/
+//static unsigned long stored_timer_rate;
 
 struct cpufreq_interactivex_cpuinfo {
 	struct timer_list cpu_timer;
